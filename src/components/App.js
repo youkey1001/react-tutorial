@@ -1,15 +1,27 @@
 import React from 'react';
 
 class App extends React.Component {
+    // constructorを貼り付けてください
+    constructor(props) {
+        super(props);
+        // stateを定義してください
+        this.state = {name: 'にんじゃわんこ'};
+    }
+
+    // handleClickメソッドを定義してください
+    handleClick(name) {
+        this.setState({name: name});
+    }
+
     render() {
         return (
         <div>
-            <h1>こんにちは、にんじゃわんこさん！</h1>
-            {/* <button>タグ「ひつじ仙人」を追加してください */}
-            <button>ひつじ仙人</button>
+            <h1>こんにちは、{ this.state.name }さん！</h1>
+            {/* onClickイベント内の処理を、handleClickメソッドを呼び出す処理に書き換えてください*/}
+            <button onClick={() => {this.handleClick('ひつじ仙人')}}>ひつじ仙人</button>
             
-            {/* <button>タグ「にんじゃわんこ」を追加してください */}
-            <button>にんじゃわんこ</button>
+            {/* onClickイベント内の処理を、handleClickメソッドを呼び出す処理に書き換えてください*/}
+            <button onClick={() => {this.handleClick('にんじゃわんこ')}}>にんじゃわんこ</button>
     	</div>
         );
     }
