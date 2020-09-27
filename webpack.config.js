@@ -10,9 +10,9 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader'
+          test: /\.(js|jsx)$/,      // 拡張子が「js / jsx」のみをバンドル対象
+          exclude: /node_modules/,  // フォルダ名が「node_modules」配下は除外
+          loader: 'babel-loader'    // バンドルする際に「babel-loader」を呼び出してトランスパイルする
         }
       ]
     }
