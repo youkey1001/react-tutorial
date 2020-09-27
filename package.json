@@ -18,5 +18,11 @@
     "react-dom": "^16.13.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
